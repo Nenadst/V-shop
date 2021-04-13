@@ -1,0 +1,63 @@
+.hero {
+    font-size: 1.4rem;
+    margin-bottom: 5.2rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @include breakpoint(sm) {
+        margin-bottom: 7.4rem;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 10.5rem;
+    }
+
+    &__wrapper {
+        max-width: 41.3rem;
+        position: relative;
+        padding: 16.3rem 5rem 10.5rem 0;
+
+        @include breakpoint(sm) {
+            font-size: 1.6rem;
+            padding: 20rem 0 12.5rem;
+        }
+
+        @include breakpoint(xl) {
+            padding: 24.7rem 0 13.8rem;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        width: 98rem;
+        height: 98rem;
+        left: calc(50% - 48rem);
+        bottom: 0;
+        z-index: -1;
+
+        @include breakpoint(sm) {
+            left: 13rem;
+        }
+
+        @include breakpoint(xl) {
+            background-size: 139rem;
+            width: 139rem;
+            height: 139rem;
+            left: 11.5rem;
+        }
+    }
+
+    &__desc {
+        margin: 2rem 0 4rem;
+        line-height: 2.2rem;
+
+        @include breakpoint(sm) {
+            line-height: 2.8rem;
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(xl) {
+            margin: 5rem 0 5.5rem;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.contact {
+    text-align: center;
+    background: $color-lightest;
+
+    &__container {
+        padding: 4.7rem 0 5.7rem;
+        position: relative;
+
+        @include breakpoint(sm) {
+            padding: 6.5rem 0 7.2rem;
+        }
+
+        @include breakpoint(xl) {
+            padding: 14.2rem 0;
+        }
+    }
+
+    &__wrapper {
+        @include breakpoint(sm) {
+            width: 60%;
+            max-width: 42.4rem;
+            margin-left: auto;
+            margin-top: 3rem;
+        }
+    }
+
+    &__disclaimer {
+        margin: 2.5rem auto 1rem;
+
+        @include breakpoint(sm) {
+            margin-top: 1rem;
+            margin-bottom: 5rem;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 1.8rem;
+        }
+    }
+
+    &__dogs {
+        position: relative;
+        height: 17.5rem;
+        width: 16.6rem;
+        margin: 3rem auto;
+
+        @include breakpoint(sm) {
+            position: absolute;
+            top: 16.6rem;
+            left: 2.2rem;
+            width: 27rem;
+            height: 28rem;
+        }
+
+        @include breakpoint(xl) {
+            position: absolute;
+            top: 15.6rem;
+            left: 0;
+            width: 45.7rem;
+            height: 48.1rem;
+        }
+    }
+
+    &__dog {
+        position: absolute;
+        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+        border-radius: 1rem;
+
+        @include breakpoint(sm) {
+            border-radius: 2.5rem;
+            box-shadow: 2.5px 4.33px 14px rgba(0, 0, 0, 0.18);
+        }
+
+        &:nth-child(1) {
+            z-index: 3;
+            top: 0;
+            left: 0;
+        }
+
+        &:nth-child(2) {
+            right: 0;
+            top: 2.65rem;
+        }
+
+        &:nth-child(3) {
+            right: 7.5rem;
+            bottom: 0;
+            z-index: 2;
+
+            @include breakpoint(sm) {
+                right: 12.2rem;
+            }
+           
+            @include breakpoint(xl) {
+                right: 20.1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+// Extra large
+$bp-xl: 1440px;
+// large desktop
+$bp-lg: 1200px;
+// desktop
+$bp-md: 900px;
+// tablet
+$bp-sm: 768px;
+// mobile
+$bp-xs: 375px;
+
+$breakpoints: (
+  (
+    name: xl,
+    size: $bp-xl,
+  ),
+  (
+    name: lg,
+    size: $bp-lg,
+  ),
+  (
+    name: md,
+    size: $bp-md,
+  ),
+  (
+    name: sm,
+    size: $bp-sm,
+  ),
+  (
+    name: xs,
+    size: $bp-xs,
+  )
+);
+
+@mixin breakpoint($size) {
+  @each $point in $breakpoints {
+    @if ($size == map-get($point, name)) {
+      @media (min-width: map-get($point, size)) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin escape() {
+  width: calc(100% + $container-padding * 2);
+  flex: 0 0 calc(100% + $container-padding * 2);
+  margin-left: $container-padding * -1;
+
+  @include breakpoint(sm) {
+    width: calc(100% + $container-padding-mob * 2);
+    flex: 0 0 calc(100% + $container-padding-mob * 2);
+    margin-left: $container-padding-mob * -1;
+  }
+}
+
+@mixin hover {
+  @media only screen and (min-width: 768px) {
+    &:hover {
+      @content;
+    }
+  }
+}

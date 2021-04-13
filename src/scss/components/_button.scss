@@ -1,0 +1,34 @@
+.button {
+    color: white;
+    background-color: $color-primary;
+    border-radius: 0.8rem;
+    padding: 1.3rem 3.7rem;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: inline-block;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    border: none;
+    // line-height: 2.6rem; // Per design line height is set to 26px but it does not match with the look
+
+    &--small {
+        padding: 1rem 2.7rem;
+        font-size: 1.2rem;
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+        max-width: 28.5rem;
+        margin: 0 auto;
+
+        @include breakpoint(sm) {
+            max-width: 100%;
+        }
+    }
+
+    &:hover {
+        background-color: #1E6B4C;
+    }
+}

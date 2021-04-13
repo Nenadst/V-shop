@@ -1,0 +1,50 @@
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    &--narrow {
+        max-width: 120rem - 2*7rem; // 7rem narrower on left and right side
+    }
+
+    @include breakpoint(sm) {
+        padding: 0 2.5rem;
+    }
+}
+
+.col-prim {
+    color: $color-primary;
+}
+.col-sec {
+    color: $color-secondary;
+}
+.col-ter {
+    color: $color-tertiary;
+}
+
+.category {
+    color: $color-alternative;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+
+.skip-to-main {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    font-size: 3rem;
+    color: $color-lightest;
+    background-color: $color-primary;
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.2s;
+
+    &:focus {
+        z-index: 20;
+        opacity: 1;
+    }
+}

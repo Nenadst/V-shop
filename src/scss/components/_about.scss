@@ -1,0 +1,56 @@
+.about {
+    text-align: center;
+    font-size: 12px;
+    line-height: 2.4rem;
+    background-image: url(../images/about-us-mob.svg);
+    background-size: auto 100%;
+    background-position: center;
+
+    @include breakpoint(sm) {
+        background-image: none;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    &__wrapper {
+        padding: 2.6rem 0 6.3rem;
+
+        @include breakpoint(sm) {
+            background-image: url(../images/about-us-tab.svg);
+            background-size: cover;
+            background-position: center;
+            padding: 4.7rem 0 6.9rem;
+
+        }
+
+        @include breakpoint(xl) {
+            background-image: url(../images/about-us-xl.svg);
+            padding: 6.8rem 0 8.7rem;
+        }
+    }
+
+    &__content { 
+        max-width: 59.6rem;
+        margin: 0 auto;
+
+        @include breakpoint(xl) {
+            max-width: 79.7rem;
+        }
+    }
+
+    &__title {
+        max-width: 23.5rem;
+        margin: 1rem auto 4rem;
+
+        @include breakpoint(sm) {
+            max-width: 44.4rem;
+        }
+
+        @include breakpoint(xl) {
+            margin-bottom: 1.8rem;
+        }
+    }
+}

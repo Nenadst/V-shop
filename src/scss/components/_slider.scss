@@ -1,0 +1,139 @@
+.slider {
+    text-align: center;
+    padding-bottom: 4.5rem;
+
+    &__slider-wrapper {
+        position: relative;
+        margin-top: 4.5rem;
+
+        @include breakpoint(sm) {
+            width: 100%;
+            margin: 5.6rem auto 0;
+            $size: 4rem;
+            padding-left: $size;
+            padding-right: $size;
+        }
+    }
+
+    &__track {
+        overflow: hidden;
+    }
+
+    &__slider {
+        display: flex;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    &__slider-card {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: bold;
+        margin-right: 1.1rem;
+        flex-shrink: 0;
+
+        @include breakpoint(sm) {
+            margin-right: 1.3rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(xl) {
+            margin-right: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 9.6rem;
+        height: 9.6rem;
+        object-fit: cover;
+        margin: 0 auto;
+        
+        @include breakpoint(sm) {
+            width: 11.7rem;
+            height: 11.7rem;
+        }
+
+        @include breakpoint(xl) {
+            width: 17.6rem;
+            height: 17.6rem;
+        }
+    }
+
+    &__image-wrapper {
+        display: block;
+        background-color: #F3EFF0;
+    }
+
+    &__product {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        padding: 0.5rem;
+
+        @include breakpoint(sm) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__price {
+        color: $color-tertiary;
+        margin-top: .2rem;
+        display: block;
+    }
+    
+    &__button {
+        margin-top: 1.5rem;
+        background-color: $color-primary;
+        fill: $color-lightest;
+        border-radius: 50%;
+        border: none;
+        padding: 1rem;
+        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+        transition: opacity .2s;
+
+        &[disabled] {
+            opacity: 0.5;
+        }
+
+        @include breakpoint(sm) {
+            padding: 1.3rem;
+            position: absolute;
+            top: 25% ;
+        }
+
+        &--prev {
+            transform: rotate(90deg);
+            margin-right: 2.4rem;
+
+            @include breakpoint(sm) {
+                margin: 0;  
+                left: -1.4rem;
+            }
+        }
+        
+        &--next {
+            transform: rotate(-90deg);
+
+            @include breakpoint(sm) {
+                margin: 0;
+                right: -1.4rem;
+            }
+        }
+    }
+
+    &__arrow-icon {
+        width: 1.1rem;
+        height: 1.1rem;
+        display: block;
+
+        @include breakpoint(sm) {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+}

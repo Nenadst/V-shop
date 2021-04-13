@@ -1,0 +1,32 @@
+.form {
+
+    @include breakpoint(sm) {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 2rem 1.7rem 1.6rem;
+        border: 1px solid #E1E1E1;
+        border-radius: 0.8rem;
+        font-family: $ff-sans;
+        font-size: 1.2rem;
+    }
+    
+    input {
+        margin-bottom: 1.7rem;
+    }
+
+    textarea {
+        margin-bottom: 3.4rem;
+        height: 12.5rem;
+        padding: 1rem 1.7rem;
+
+        @include breakpoint(sm) {
+            margin-bottom: 2.7rem;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.accordion {
+    list-style: none;
+    font-size: 1.2rem;
+    fill: $color-secondary;
+
+    &__list-item {
+        border-bottom: 1px solid $color-lightest;
+
+        &--active {
+            background-color: #E5F3FE;
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        width: 100%;
+        padding: 1.8rem;
+        padding-bottom: 1rem;
+        align-items: center;
+
+        @include breakpoint(sm) {
+            padding: 2rem;
+        }
+    }
+
+    &__main-icon {
+        width: 2.7rem;
+        height: 2rem;
+    }
+
+    &__arrow {
+        width: 1.4rem;
+        height: 1.4rem;
+        transition: transform .2s;
+
+        &--active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__title {
+        margin-right: auto;
+        margin-left: .8rem;
+        font-size: 1.6rem;
+        font-family: $ff-serif;
+        font-weight: bold;
+    }
+
+    &__text {
+        padding: 0 5rem 2rem 2.2rem;
+        display: none;
+
+        @include breakpoint(sm) {
+            padding-right: 7.6rem;
+        }
+
+        @include breakpoint(lg) {
+            padding-right: 9rem;
+        }
+    }
+}
+
+noscript {
+    .accordion {
+        &__arrow {
+            display: none;
+        }
+
+        &__text {
+            display: block;
+        }
+    }
+}

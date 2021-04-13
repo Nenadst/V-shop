@@ -1,0 +1,37 @@
+[
+    { 
+        "image": "images/slider/slider01.png", 
+        "name": "Eukanuba Active Adult Large Breed", 
+        "price": 45.00
+    },
+    { 
+        "image": "images/slider/slider02.png", 
+        "name": "Comfort Dog House", 
+        "price": 102.99 
+    },
+    { 
+        "image": "images/slider/slider03.png", 
+        "name": "Wild Knots Bears", 
+        "price": 4.99 
+    },
+    { 
+        "image": "images/slider/slider04.png", 
+        "name": "6 x Barkoo Chew Bones with Filling", 
+        "price": 5.79 
+    },
+    { 
+        "image": "images/slider/slider05.png", 
+        "name": "Barkoo Filled Chew Bone – with Mint", 
+        "price": 8.69 
+    },
+    { 
+        "image": "images/slider/slider01.png", 
+        "name": "Eukanuba Active Adult Large Breed", 
+        "price": 45.00
+    },
+    { 
+        "image": "images/slider/slider02.png", 
+        "name": "Comfort Dog House", 
+        "price": 102.99 
+    }
+] 
